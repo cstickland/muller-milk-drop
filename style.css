@@ -1,0 +1,168 @@
+/*
+Theme Name: Müller
+Author: Chris Stickland
+Description: Theme for Müller Milk Drop
+Version: 1.0
+Tested up to: 5.9
+Requires at least: 5.0
+Requires PHP: 7.0
+Text Domain: assist
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@font-face {
+    font-family: 'Creme';
+    src: url('fonts/Creme.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('fonts/Rubik.ttf') format('truetype');
+}
+
+
+:root {
+    --font-rubik: 'Rubik', sans-serif;
+    --font-creme: Creme, sans-serif;
+    --color-text: #3C3C3C;
+    --color-text-headings: #141414;
+    --color-red: #DA291C;
+    --color-light-blue: #C2E9F0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    overflow-x: clip;
+}
+
+body {
+    margin: 0;
+    color: var(--color-text);
+    font-family: var(--font-rubik);
+    font-size: 1rem;
+    
+    font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem);
+}
+
+main {
+    display: block;
+}
+.btn {
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--color-red);
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    font: normal normal bold 18px Rubik;
+    letter-spacing: 0.54px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+
+    font-size: 1rem;
+}
+
+.form-input,
+.postcode-check-input {
+    font: normal normal normal 16px/28px Rubik;
+    letter-spacing: 0.54px;
+    align-self: stretch;
+    border: solid 1px #E0E0E0;
+    color: var(--color-text);
+
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem);
+
+}
+
+.form-input:focus,
+.postcode-check-input:focus {
+    box-shadow: 15px 15px 20px #0000000D;
+    outline: 0;
+    /* border: 0; */
+}
+
+.postcode .btn {
+    padding: 1.125rem;
+    display: flex;
+}
+
+.postcode .btn img {
+    width: 1.125rem;
+    height: auto;
+}
+
+.postcode-check-input {
+    background-image: url('assets/icons/md_map_pin.svg');
+    background-repeat: no-repeat;
+    background-size: 0.875rem;
+    background-size: clamp(0.875rem, 0.474rem + 0.647vw, 1.25rem);
+    background-position: 1.25rem center;
+    padding-left: 3.5rem;
+    padding-left: clamp(3.5rem, 3.233rem + 0.431vw, 3.75rem);
+    border-radius: 5px 0 0 5px;
+
+    flex-grow: 1;
+}
+
+form.postcode {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+h1, h2 {
+    font-family: var(--font-creme);
+    text-transform: uppercase;
+    color: var(--color-text-headings);
+    font-size: 2.875rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(2.875rem, -1.4167rem + 8.941vw, 9.3125rem);
+}
+
+h2 {
+    font-size: clamp(2.875rem, -0.5833rem + 7.2049vw, 8.0625rem);
+}
+
+h6 {
+    color: var(--color-red);
+}
+
+.hide-mobile {
+    display: none;
+}
+
+
+@media only screen and (min-width: 62rem) {
+    .btn {
+        font-size: 1.125rem;
+        font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem);
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    .hide-desktop,
+    .footer-wave-container {
+        display: none;
+    }
+
+    .postcode .btn {
+        padding: 1.5rem 3rem;
+        display: flex;
+    }
+
+    .postcode-check-input {
+        flex-grow: 0;
+    }
+}

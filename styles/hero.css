@@ -1,0 +1,96 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
+    font-size: clamp(1rem, 0.6667rem + 0.6944vw, 1.5rem);
+
+    position: relative;
+}
+
+.hero .mobile-logo {
+    position: absolute;
+    left: 1.875rem;
+    top: 0.875rem;
+}
+
+.mobile-logo img {
+
+    width: 3.125rem;
+    width: clamp(3.125rem, 1.042rem + 4.34vw, 6.25rem);
+}
+
+.desktop-logo img {
+    width: 3.125rem;
+    width: clamp(3.125rem, 1.042rem + 4.34vw, 6.25rem);
+}
+.hero-shape {
+    max-height: 382px;
+    display: none;
+}
+
+.hero-text-content {
+    margin-top: 3.75rem;
+    padding: 0 1.25rem;
+    /* min-width: 900px; */
+    max-width: 100%;
+}
+.hero-image img {
+    max-width: 100%;
+    min-height: 100%;
+
+
+}
+
+.hero-text {
+    margin-bottom: 1.875rem;
+}
+
+@media only screen and (min-width: 62rem) {
+    .hero {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin: 0 auto;
+        position: relative;
+        padding: 0;
+        gap: 0;
+    }
+    .hero-text-content {
+        min-width: 50%;
+        max-width: 50%;
+        margin-top: 0;
+    }
+    .hero-text-content a {
+        display: block;
+        margin-top: 1.25rem;
+        padding-left: 92px;
+        margin-bottom: 81px;
+    }
+
+    .hero-text {
+        max-width: 40.25rem;
+        line-height: 2rem;
+    }
+    .hero-text-content__text {
+        padding-left: 8.75rem;
+
+        padding-left: clamp(1rem, 0.991rem + 6.466vw, 8.75rem);
+    }
+    .hero-text-content h1 {
+        -webkit-line-clamp: 2; /* number of lines to show */
+       line-clamp: 2;
+    }
+    
+
+    .hero-image img {
+        max-width: none;
+        min-width: 60%;
+    }
+    .hero-shape {
+        display: block;
+        align-self: center;
+        position: absolute;
+        left: -11rem;
+    }
+}

@@ -1,0 +1,97 @@
+.footer-section {
+    background-color: var(--color-light-blue);
+    background-image: url('../assets/shapes/md_footer_wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:  3.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-heading {
+    font-family: var(--font-creme);
+    
+}
+
+.footer-wave-container {
+    width: 100%;
+    margin-bottom: -5px;
+}
+.footer-wave {
+    width:100%;
+    display: block;
+    height: 100%;
+}
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.footer-socials.hide-desktop {
+    margin: 2rem 0;
+}
+.footer-socials.hide-mobile {
+    display: none;
+}
+
+.footer-socials a{
+    display: block;
+}
+
+.footer-heading-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-heading-container img {
+    margin-bottom: 1rem;
+}
+
+.footer-section .postcode {
+    max-width: 664px;
+    margin-bottom: 3.75rem;
+}
+
+.footer-section .postcode input {
+    flex-grow: 1;
+}
+
+.footer-heading {
+    font-size: 2.875rem;
+    margin: 1.25rem 0;
+}
+@media only screen and (min-width: 62rem) {
+    .footer-socials.hide-mobile {
+        display: flex;
+    }
+
+    .footer-section .postcode {
+        margin-bottom: 2.375rem;
+    }
+
+    .footer-socials.hide-desktop {
+        display: none;
+    }
+    .footer-section {
+        padding-bottom: 0.25rem;
+        padding-left: clamp(4rem, -1.078rem + 8.19vw, 8.75rem);
+        padding-right: clamp(4rem, -1.078rem + 8.19vw, 8.75rem);
+        padding-top: 7rem;
+        
+        background-color: #ffffff;
+        
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    
+    .footer-heading {
+        font-size: 3.4375rem;
+        
+        font-size: clamp(2.875rem, 2.619rem + 0.682vw, 3.4375rem);
+    }
+    .footer-heading-container img {
+    align-self: flex-end;
+    }
+}

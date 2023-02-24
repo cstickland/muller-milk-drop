@@ -1,0 +1,226 @@
+.testimonials-section {
+    padding: 1.875rem 0;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.testimonials {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-quote * {
+    margin: 0;
+}
+.testimonials-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-title {
+    font-family: var(--font-creme);
+    color: var(--color-text-headings);
+
+    max-width: 336px;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    font-size: 4.375rem;
+}
+.slider-btn {
+    width: 2.375rem;
+    width: clamp(2.375rem, -0.208rem + 5.382vw, 6.25rem);
+    height: 2.375rem;
+    height: clamp(2.375rem, -0.208rem + 5.382vw, 6.25rem);
+    aspect-ratio: 1;
+
+    background-color: var(--color-red);
+    outline: 0;
+    border-radius: 50%;
+    border: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.testimonial-rating img{
+    width: clamp(1.25rem, 0.292rem + 1.997vw, 2.688rem);
+    height: auto;
+}
+
+.testimonial {
+    display: none;
+    /* background-image: url(../assets/shapes/md_shape_4.svg);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: 50%; */
+    position: relative;
+    max-width: 948px;
+    width:100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial.active {
+    display: flex;
+
+}
+
+.testimonial.active .testimonial-quote,
+.testimonial.active .testimonial-name,
+.testimonial.active .testimonial-role {
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+
+}
+.testimonial-quote {
+    font-family: var(--font-creme);
+    font-size: clamp(1.875rem, 0.682rem + 3.182vw, 4.5rem);
+    letter-spacing: 0.3px;
+    line-height: 120%;
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.testimonial-shape {
+    display: none;
+}
+
+.testimonial-quote strong {
+    color: var(--color-red);
+}
+
+.testimonial-name,
+.testimonial-role {
+    font-size: clamp(1rem, 0.667rem + 0.694vw, 1.5rem);
+    color: #ffffff;
+}
+.slider-btn img {
+    width: 35%;
+    height: auto;
+}
+
+.prev-btn {
+    order: 1;
+    margin-right: 0.875rem;
+    margin-top: 1rem;
+}
+
+.testimonial-img {
+    width: 125%;
+}
+.testimonial-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 75%;
+    width: 95%;
+}
+.next-btn {
+    order: 2;
+    margin-top: 1rem;
+}
+@media only screen and (min-width: 62rem) {
+    .testimonials {
+        flex-wrap: nowrap;
+    }
+    .testimonial-img {
+        width: 100%;
+    }
+    .testimonials-section {
+        padding: 6.25rem 0;
+    }
+    .testimonial {
+        margin-left: 77px;
+        margin-right: 77px;
+    }
+    .prev-btn,
+    .next-btn {
+        order: 0;
+        margin-right: 0;
+    }
+
+    .prev-btn {
+        margin-left: 1.25rem;
+    }
+
+    .next-btn {
+        margin-right: 1.25rem;
+    }
+
+    .slider-btn {
+        width: 6.25rem;
+        width: clamp(2.375rem, -0.208rem + 5.382vw, 6.25rem);
+        height: 6.25rem;
+        height: clamp(2.375rem, -0.208rem + 5.382vw, 6.25rem);
+    }
+
+    .testimonial-shape {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        max-height: 30%;
+    }
+
+    .testimonial-shape.shape-1,
+    .testimonial-shape.shape-2 {
+        top: 140px;
+    }
+
+    .testimonial-shape.shape-3,
+    .testimonial-shape.shape-4 {
+        bottom: 60px;
+    }
+
+    .testimonial-shape.shape-1 {
+        left: -12.5rem;
+    }
+
+    .testimonial-shape.shape-2{
+        right: -12.5rem;
+    }
+
+    .testimonial-shape.shape-3{
+        left: -12.5rem;
+    }
+
+    .testimonial-shape.shape-4 {
+        right: -12.5rem;
+    }
+
+    .testimonial-content {
+        width: 85%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

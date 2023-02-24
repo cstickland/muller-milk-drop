@@ -1,0 +1,96 @@
+.image-and-text-section {
+    padding: 0 1.25rem;
+    margin: 1.875rem auto;
+    max-width: 120rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.block-subtitle {
+    color: var(--color-red);
+    font-size: clamp(0.875rem, 0.4583rem + 0.8681vw, 1.5rem);
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.image-and-text__image-container img {
+    max-width: 100%;
+
+    margin-bottom: 3.75rem;
+}
+.block-subtitle-horizontal {
+    background-color: var(--color-text-headings);
+    height: 3px;
+    width: 2.5rem;
+    margin-right: 1.375rem;
+}
+
+.block-text {
+    line-height: 175%;
+}
+.block-bullet-points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.block-bullet-points li{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0px;
+    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 0.7083rem + 0.3472vw, 1.125rem);
+    line-height: 220%;
+}
+
+.block-bullet-points li img {
+    margin-top: 0.25rem;
+}
+
+@media only screen and (min-width: 62rem) {
+    .image-and-text-section {
+        margin: 0 auto;
+        padding: 6.25rem 0;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1.25rem;
+        transform: translateX(-8.75rem);
+        transform: translateX(clamp(-8.75rem, 1.078rem + -8.19vw, -4rem));
+    }
+
+    .image-and-text-section.row-reverse {
+        flex-direction: row;
+        transform: translateX(8.75rem);
+        transform: translateX(clamp(4rem, -1.078rem + 8.19vw, 8.75rem));
+    }
+
+    .image-and-text__text-container {
+        width: 45%;
+    }
+    .image-and-text__image-container {
+        width: 55%;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+    .row-reverse .image-and-text__image-container {
+        justify-content: flex-start;
+    }
+    .image-and-text__image-container img {
+        object-fit:contain;
+        max-height: 95%;
+        max-width: none;
+    }
+
+    .image
+    .block-bullet-points li{
+        font-size: 1.125rem;
+        font-size: clamp(0.875rem, 0.7083rem + 0.3472vw, 1.125rem);
+    }
+
+}
