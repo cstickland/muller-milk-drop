@@ -9,6 +9,7 @@ function enqueue_styles() {
     wp_enqueue_style( 'image-and-text', get_template_directory_uri() . '/styles/image-and-text.css');
     wp_enqueue_style( 'testimonial-slider', get_template_directory_uri() . '/styles/slider.css');
 	wp_enqueue_style( 'hero', get_template_directory_uri() . '/styles/hero.css');
+	wp_enqueue_style( 'grid', get_template_directory_uri() . '/styles/grid.css');
 }
 
 
@@ -18,6 +19,7 @@ function enqueue_scripts() {
 	wp_enqueue_script('quotes', get_template_directory_uri() . '/scripts/slider.js', array(), false, true);
 	wp_enqueue_script('postcodes', get_template_directory_uri() . '/scripts/postcode.js', array(), false, true);
 	wp_enqueue_script('contact', get_template_directory_uri() . '/scripts/contact.js', array(), false, true);
+	wp_enqueue_script('grid', get_template_directory_uri() . '/scripts/grid.js', array(), false, true);
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
